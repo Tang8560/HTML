@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>                                                    <!網頁的描述>
+ <meta charset="utf-8"> </meta>                            <!告知採用的編碼>
+ <title>Homepage CSS教學 </title>
+ <style type="text/css">                                   <!加入 .~~作為名稱>
+ .keyword{color:red}  
+ .title{font-weight:bold;font-size:20px}                                                              
+ .content{width:400px;padding:10px; border:5px dashed blue;margin-top:10px;margin-bottom:10px}
+ .box{
+      position:absolute;left:400px;top:50px;
+	  width:100px;height:100px;background-color:green
+  
+ }
+
+ </style>
+<head>
+
+<body>    <!介紹box model> 
+                            
+   <div class="title">今天天氣不錯</div>   <! div在網頁中代表區塊>
+                                                                      <!style之後為css的語法>
+   <div class="content">
+        我去公園散步，餵<span class="keyword">鴿子</span>。 <br/>      <!br代表主動做斷行>
+        覺得鴿子好可愛喔。
+   </div>                                               <!由於div會造成斷行，若不想要發生開情形，可以用span取代>
+   
+   <div class="box"> </div>
+   
+   <div class="title"> 公園裡有很多小朋友  </div>
+   <div class="content"> 小朋友在玩溜滑梯，盪鞦韆，還有幾隻<span class="keyword">狗狗</span>和貓貓。 
+   </div>
+   
+   
+</body>
+</html>
