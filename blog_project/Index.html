@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>    <!--輸入!+tab能夠呈現既定格式-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!--響應式設計-->
+    <title>Blooger</title>
+    
+    <!--Font Awesome Icon-->
+    <!--從https://fontawesome.com/download下載Free for web，並將webfonts放入根目錄和all.css放入css內，即可調用facebook等icon-->
+    <link rel="stylesheet" href="./css/all.css">
+
+    <!--Custom Style-->
+    <link rel="stylesheet" href="./css/style.css">  <!--導引到存放CSS的位置-->
+
+</head>
+<body>
+    <!-----------------------------Navigation----------------------------->
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a href="#" class="text-gray">Blooger</a>  <!--會讓頁面跳到最上面，並觸發 hashchange 事件-->
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    <li class="nav-link">         <!--複製三行後按住 shift + alt + down，就可以連續複製-->
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">Category</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">Archive</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">Pages</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="social text-gray">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </nav>
+    <!-----------------------------Navigation----------------------------->
+    <!--------------------------Main Site Section------------------------->
+    <main>
+        <!------Site title------>
+        <section class="site-title">
+            <div class="site-background">
+                <h3>Tours & Travels</h3>
+                <h1>Amazing Place on Earth</h1>
+                <button class="btn">Explore</button>
+            </div>
+        </section>
+        <!------Site title------>
+    </main>
+    <!--------------------------Main Site Section------------------------->
+  
+    <!--Jquery Library file-->
+    <script src = "./js/jquery3.6.0.min.js"></script>
+
+    <!--Custom Javascript File-->
+    <script src = "./js/main.js"></script>
+</body>
+</html>

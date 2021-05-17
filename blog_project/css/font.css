@@ -1,0 +1,32 @@
+/* font-family: Abel */
+/*
+從https://fonts.google.com/下載字形，放入font資料夾，
+接著在 style.css 導入 @import url('../css/font.css');
+便能使用
+*/
+
+
+@font-face {
+    font-family: Abel;
+    src: url('../fonts/Abel/Abel-Regular.ttf');
+}
+/* font-family: Anton */
+@font-face {
+    font-family: Anton;
+    src: url('../fonts/Anton/Anton-Regular.ttf');
+}
+/* font-family: Josefin */
+@font-face {
+    font-family: Josefin;
+    src: url('../fonts/Josefin/JosefinSans-Regular.ttf');
+}
+/* font-family: Josefin */
+@font-face {
+    font-family: Lexend;
+    src: url('../fonts/Lexend_Deca/LexendDeca-Regular.ttf');
+}
+/* font-family: Josefin */
+@font-face {
+    font-family: Livvic;
+    src: url('../fonts/Livvic/Livvic-Regular.ttf');
+}

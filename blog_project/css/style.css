@@ -1,0 +1,201 @@
+/*
+px：絕對單位，代表螢幕中每個「點」( pixel )。
+em：相對單位，每個子元素透過「倍數」乘以父元素的 px 值。
+rem：相對單位，每個元素透過「倍數」乘以根元素的 px 值。
+%：相對單位，每個子元素透過「百分比」乘以父元素的 px 值。
+*/
+
+/*導入font.css以使用字形*/
+@import url('../css/font.css');
+
+html, body{
+    margin:0%;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+/*創建變數*/
+:root{
+
+    /* theme  colors */
+    --text-gray: #3f4954;
+    --text-light: #686666da;
+    --bg-color: #0f0f0f;
+    --white: #ffffff;
+    --midnight: #104f55;
+
+    /* gradient color */
+    /*從https://webgradients.com/選擇漸層色，複製右下角的CSS*/
+    /*貼上後如下 background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+    /* theme  font-family */
+    --Abel:'Abel', cursive;  /*變數名稱:賦值*/
+    --Anton:'Anton', cursive; 
+    --Josefin:'Josefin', cursive; 
+    --Lexend:'Lexend', cursive; 
+    --Livvic:'Livvic', cursive; 
+}
+
+/*-----------------global class-----------------*/
+
+a{ text-decoration: none;}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;         /*當縮小到視圖viewport無法容納時，flex-row的部分會統一換行*/
+}
+
+ul{list-style-type: none;}
+h1{
+    font-family: var(--Lexend);
+    font-size: 2.5rem;
+}
+h2{
+    font-family: var(--Lexend);
+}
+h3{
+    font-family: var(--Abel);
+    font-size: 1.3rem;
+}
+button.btn{
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family:  var(--Livvic);
+    cursor: pointer;
+}
+/*---------><--------global class---------><--------*/
+
+
+/*-----------------navbar-----------------*/ 
+.nav{
+    background: white;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 10vh;                        /* 1vh — one equal 1/100 height of viewport. */
+    overflow: hidden;
+    transition: height 1s ease-in-out;  /*目錄選單依序展開*/
+}
+
+.nav .nav-menu{
+    justify-content: space-between;
+}
+
+.nav .toggle-collapse{
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i{
+    font-size:1.4rem;
+    color: var(--text-gray);
+}    
+
+.nav .nav-items{
+    display: flex;
+    margin: 0;
+}
+
+/*綁定jquery的click動作*/
+.collapse{
+    height: 30rem;    
+}
+
+
+.nav .nav-items .nav-link{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: var(--Abel);
+    font-size: 1.1rem;
+}
+
+.nav .nav-items .nav-link:hover{
+    background-color: var(--midnight);
+}
+.nav .nav-items .nav-link:hover a{
+    color: var(--white);
+}
+.nav .nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block;
+    /*font-family: Abel, cursive;*/
+    font-family: var(--Lexend);  /*使用變數的方式設定font-family*/
+    font-size: 1.6rem;
+}
+.nav .social{
+    padding: 1.4rem 0
+}
+.nav .social i{
+    padding: 0 .2rem
+}
+.nav .social i:hover{
+    color: #a1c4cf; 
+}
+
+/*---------><--------navbar---------><--------*/
+
+/*-----------------Main Content-----------------*/
+/*-----------------Site Title----------------*/
+main .site-title{
+    background:url('../assets/Background-image.png');
+    background-size: cover;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+}
+
+main .site-background{
+    padding-top: 10rem;
+    text-align: center;
+    color: var(--white);
+}
+
+main .site-title h1,h3{
+    margin: .3rem;
+}
+
+main .site-title .btn{
+    margin: 1.8rem;
+    background: var(--sky);
+}
+
+main .site-title .btn:hover{
+    background: transparent;
+    border: 1px solid var(--white);
+    color: white;
+}
+/*---------><--------Site Title--------><--------*/
+
+/*---------><--------Main Content----------><-------*/
+
+
+
+/*--viewport less then or equal to 750px--*/
+/*響應式設計*/
+
+@media only screen and (max-width:750px){
+    .nav .nav-menu , .nav .nav-items{
+        flex-direction: column;
+    }
+
+    .nav .toggle-collapse{
+        display:initial;
+    }
+}
+
+
+/*--viewport less then or equal to 750px--*/
